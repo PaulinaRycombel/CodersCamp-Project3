@@ -1,0 +1,186 @@
+a {
+    text-decoration: none;
+  }
+  
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Oswald', sans-serif;
+  }
+
+#hero {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./img/headerimg.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+/*--------BOOTSTRAP NAVIGATION BAR----------*/
+.bg-primary {
+    background-color: rgba(34, 34, 34, 0.6)!important;
+}
+
+.nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    min-width: 30px;
+    max-width: fit-content;
+}
+
+.nav-link {
+    color: white !important;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid white;
+}
+
+.active {
+    border-bottom: 1px solid white;
+}
+
+
+/*--------CONTAINER---------*/
+#attributes {
+    max-width: 990px;
+    height: 400px;
+    background-color: rgba(34, 34, 34, 0.6);
+    margin: 0 auto;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+
+#attributes-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 20px;
+}
+
+
+/*--------TOP CONTAINER ITEMS---------*/
+#attributes-top {
+    display: flex;
+    height: 15%;
+    padding: 5px 50px;
+}
+
+.city {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    font-family: 'Bebas Neue';
+    margin-left: 10px;
+}
+
+.date {
+    font-size: 1rem;
+    font-style: italic;
+    margin-left: auto;
+}
+
+/*--------CENTER CONTAINER ITEMS---------*/
+#attributes-center {
+    display: flex;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+}
+
+.today-icon {
+    justify-content: right;
+}
+
+#temperature {
+    font-size: 4.5em;
+    font-weight: bold;
+    justify-content: left;
+    margin: auto 0;
+}
+
+/*--------BOTTOM CONTAINER ITEMS---------*/
+#attributes-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.bottom-item {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-between;
+}
+
+/*--------SWIPER---------*/
+.swiper-container {
+    background-color: rgba(34, 34, 34, 0.6);
+    color: white;
+    height: 170px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 10px;
+    max-width: 990px;
+}
+
+.swiper-wrapper {
+    width: 33.3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#forecast-days {
+    max-width: 990px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #temperature {
+        font-size: 3em;
+    }
+
+    #today-icon {
+        width: 160px;
+    }
+
+    #attributes {
+        height: 500px;
+    }
+
+    #attributes-top {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 20px;
+    }
+
+    #attributes-top > .date {
+        margin-left: 0;
+    }
+
+    .swiper-slide > div:first-child {
+        font-size: 10px !important;
+    }
+
+    .swiper-slide > div:last-child {
+        font-size: 15px !important;
+    }
+  }

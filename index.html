@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Current weather data</title>
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./package/css/swiper.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="hero">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">Weather Data</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav navigation">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#London">London</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Paris">Paris</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Barcelona">Barcelona</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Madrid">Madrid</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="attributes">
+                <div id="attributes-container">
+                    <div id="attributes-top">
+                        <img id="icon" src="./img/flagUK.png" width="50px" height="50px"><div id="top-item" class="city">London, the United Kingdom</div>
+                        <div class="date">Today, </div>
+                    </div>
+                    <div id="attributes-center">
+                        <div><img id="today-icon" src="./animated/day.svg" width="240px"></div>
+                        <div id="temperature" class="top-item">°C</div>
+                    </div>
+
+                    <div id="attributes-bottom">
+                            <div class="bottom-item">
+                                <div>pressure</div>
+                                <div id="pressure"></div>
+                            </div>
+                            <div class="bottom-item">
+                                <div>humidity</div>
+                                <div id="humidity"></div>
+                            </div>
+                            <div class="bottom-item">
+                                <div>minimum</div>
+                                <div id="temp-min"></div>
+                            </div>
+                            <div class="bottom-item">
+                                <div>maximum</div>
+                                <div id="temp-max"></div>
+                            </div>
+                            <div class="bottom-item">
+                                <div>clouds</div>
+                                <div id="clouds"></div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper" id="forecast-days">
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div>date</div>
+                            <img src="">
+                            <div>temp</div>
+                        </div>  
+                    </div>
+                <div class="swiper-pagination"></div>
+                </div>
+        </div>
+        <script src="./package/js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 10,
+                freeMode: true,
+                pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                },
+            });
+        </script>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
